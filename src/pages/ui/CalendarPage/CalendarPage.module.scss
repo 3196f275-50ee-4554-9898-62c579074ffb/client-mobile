@@ -1,0 +1,91 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 100px;
+
+  & .user {
+    padding: 5px 5px 5px 20px;
+    box-shadow: var(--shadow);
+    background-color: var(--bg);
+    border-radius: var(--border-radius-4);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & .avatar {
+      width: 65px;
+      height: 65px;
+      border-radius: var(--border-radius-4);
+      background-color: var(--primary-hover);
+    }
+  }
+
+  & .calendar {
+    padding: 20px;
+    box-shadow: var(--shadow);
+    background-color: var(--bg);
+    border-radius: var(--border-radius-4);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    & .daysOfWeek {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      text-align: center;
+      margin-bottom: 5px;
+    }
+
+    & .days {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      gap: 5px;
+      text-align: center;
+    }
+
+    & .dayOfWeek {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 35px;
+      width: 35px;
+      border-radius: 50%;
+    }
+
+    & .day {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 35px;
+      width: 35px;
+      border-radius: 50%;
+      background-color: var(--white);
+      cursor: pointer;
+
+      &.current {
+        background-color: var(--primary);
+        color: var(--white);
+      }
+
+      &.active {
+        background-color: var(--gray);
+      }
+
+      &.inactive {
+        background-color: var(--white);
+      }
+
+      &:hover {
+        background-color: var(--primary-hover);
+      }
+    }
+
+    & .dayText {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
